@@ -7,6 +7,9 @@ void PromicroRA01SHBoard::begin() {
   NRF52Board::begin();
   btn_prev_state = HIGH;
 
+  pinMode(PIN_EXT_VCC, OUTPUT);
+  digitalWrite(PIN_EXT_VCC, HIGH);
+
   pinMode(PIN_VBAT_READ, INPUT);
 
   #ifdef BUTTON_PIN
