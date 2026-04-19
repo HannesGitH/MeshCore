@@ -87,5 +87,5 @@
 // No dedicated user button is wired in this variant; pin 12 (P1.11) is exposed
 // and can be repurposed. Override PIN_USER_BTN in platformio.ini to enable.
 
-#define PIN_BUTTON1          (12)
+#define PIN_BUTTON1          (2)   // P0.17
 #define BUTTON_PIN           PIN_BUTTON1

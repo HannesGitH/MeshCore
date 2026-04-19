@@ -23,7 +23,7 @@
 
 // Battery sense (same wiring as stock Pro Micro - optional external divider)
 #define PIN_VBAT_READ     17
-#define ADC_MULTIPLIER    (1.815f) // voltage divider dependent; tune as needed
+#define ADC_MULTIPLIER    (1.758f) // 1M:1M voltage divider, 3.6V ref, 12-bit ADC
 
 class PromicroRA01SHBoard : public NRF52BoardDCDC {
 protected:

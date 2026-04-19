@@ -83,5 +83,5 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Builtin buttons
 
-#define PIN_BUTTON1          (12)
+#define PIN_BUTTON1          (2)   // P0.17
 #define BUTTON_PIN           PIN_BUTTON1
