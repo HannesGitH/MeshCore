@@ -4,7 +4,10 @@
 XiaoC3Board board;
 
 #if defined(P_LORA_SCLK)
-  static SPIClass spi;
+  // ESP32-C3 only has one user SPI peripheral (FSPI). Default SPIClass() uses HSPI which
+  // does not exist on C3, so SPI calls would silently fail and the radio ID readback would
+  // return CHIP_NOT_FOUND (-2). Pin to FSPI explicitly here.
+  static SPIClass spi(FSPI);
   RADIO_CLASS radio = new Module(P_LORA_NSS, P_LORA_DIO_1, P_LORA_RESET, P_LORA_BUSY, spi);
 #else
   RADIO_CLASS radio = new Module(P_LORA_NSS, P_LORA_DIO_1, P_LORA_RESET, P_LORA_BUSY);
