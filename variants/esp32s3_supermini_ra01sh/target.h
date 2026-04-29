@@ -9,6 +9,8 @@
 #include <helpers/SensorManager.h>
 #ifdef DISPLAY_CLASS
   #include <helpers/ui/SSD1306Display.h>
+#endif
+#ifdef PIN_USER_BTN
   #include <helpers/ui/MomentaryButton.h>
 #endif
 
@@ -19,6 +21,8 @@ extern SensorManager sensors;
 
 #ifdef DISPLAY_CLASS
   extern DISPLAY_CLASS display;
+#endif
+#ifdef PIN_USER_BTN
   extern MomentaryButton user_btn;
 #endif
 
